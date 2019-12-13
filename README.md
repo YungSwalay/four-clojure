@@ -7,7 +7,7 @@ This app allows easy testing of solutions to the problems on the 4clojure.com
 I still haven't used it much at CLI directly, but from the repl you can use -main
 as such:
 
-	=> (-main [p & args])
+    => (-main [p & args])
 
 where `p` is 4clojure problem number and args are the args that you would like to test.
 In general, `__` in the 4clojure problems can be replaced with `-main p` to produce
@@ -16,10 +16,12 @@ a true result for the unit tests.
 ## Examples
 
 Problem #62 (iterate)
+
     => (= (take 100 (-main 62 inc 0)) (take 100 (range)))
     ;; true
 
 Problem #55 (count-occurrences)
+
     => (= (-main 55 [1 1 2 3 2 1 1]) {1 4, 2 2, 3 1})
     ;; true
 
