@@ -1,36 +1,29 @@
 # four-clojure
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+This app allows easy testing of solutions to the problems on the 4clojure.com
 
 ## Usage
 
-FIXME: explanation
+I still haven't used it much at CLI directly, but from the repl you can use -main
+as such:
 
-    $ java -jar four-clojure-0.1.0-standalone.jar [args]
+	=> (-main [p & args])
 
-## Options
-
-FIXME: listing of options this app accepts.
+where p is 4clojure problem number and args are the args that you would like to test.
+In general, `__` in the 4clojure problems can be replaced with `-main p` to produce
+a true result for the unit tests.
 
 ## Examples
 
-...
+Problem #62 (iterate)
+	=> (= (take 100 (-main 62 inc 0)) (take 100 (range)))
+	;; true
 
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+Problem #55 (count-occurrences)
+	=> (= (-main 55 [1 1 2 3 2 1 1]) {1 4, 2 2, 3 1})
+	;; true
 
 ## License
-
-Copyright © 2019 FIXME
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
